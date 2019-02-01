@@ -32,7 +32,7 @@ The four projects outlined are as follows:
 
  * **Image Steganography** introduces bitwise operations, file IO, and different aspects of bitmap files
 
- * **SHA2 Hash**
+ * **SHA2 Hash** introduces hashing algorithms and reinforces bitwise operations
 
 More projects will be added in the future!
 
