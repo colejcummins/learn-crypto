@@ -95,6 +95,9 @@ def main():
     set = set.split(",")
     enig_ma = enigma([int(set[i]) for i in range(3)])
 
+    # initializes the plugboard 
+    in_board, out_board = plugboard()
+
     # loops until the user inputs "quit"
     while True:
         print("\nSETTINGS: {!r}, {!r}, {!r}".format(enig_ma.r1.count,
@@ -109,7 +112,43 @@ def main():
             print("RESETTING") 
             enig_ma = enigma([int(set[i]) for i in range(3)])
             continue
-        print(enigma_enc(enig_ma, inp.upper().replace(" ", "")))
+
+        dif_inp = translate(inp.upper().replace(" ", ""), in_board)
+        print(translate(enigma_enc(enig_ma, dif_inp), out_board))
+
+
+# translates the input to the plugboard
+def translate(inp, board):
+    return "".join(board[c] for c in inp)
+
+
+# deals with the creation of the plugboard
+def plugboard():  
+    in_list = []
+    out_list = [] 
+    while True:
+        inp = input("Enter plugboard settings (ex. W, M): ")
+
+        while valid(inp):
+            inp = input("NOT VALID\nEnter plugboard settings (ex. W, M): ")
+
+        if inp == "start":
+            break
+        temp = inp.split(", ") 
+        in_list += temp[0]
+        out_list += temp[1]
+
+    return (dict(zip(in_list, out_list)), dict(zip(out_list, in_list)))
+
+
+# checks to see if the plugboard input is valid
+def valid(inp):
+    if len(inp.split(", ")) == 1 and inp == "start":
+        return False
+    for c in inp.split(", "):
+        if len(c) > 1:
+            return True
+    return not inp.replace(", ", "").isalpha() or len(inp.split(", ")) != 2
 
 
 # encodes all the letters in a given input
