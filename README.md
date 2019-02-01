@@ -20,7 +20,19 @@ The *Python Introduction* suplements learning concepts with [Codingbat](https://
 
 The *Python Toolkit* highlights basic python functions and statements by providing example code, encouraging students to use the python shell in the terminal as a resource 
 
+### 2. Sample Projects
 
+The four projects outlined are as follows:
+
+ * **Shift Cipher** as a basic substitution cipher that introduces user input, string and list operations, touching on ascii encoding
+
+ * **Enigma Machine** is another substitution cipher that highlights mapping and dictionaries 
+
+ * **Image Steganography** introduces bitwise operations, file IO, and different aspects of bitmap files
+
+ * **SHA2 Hash**
+
+More projects will be added in the future!
 
 
 
