@@ -6,9 +6,11 @@ Learn Crypto is a suite of lesson plans and sample projects for teaching introdu
 
 All projects are done in python with example code and project specifications outlining what is expected 
 
-### 1. Python Intro
+### 1. Python Introduction
 
-A short introduction to python concepts, including: 
+For python/programming beginners start with the *Python Introduction*, using the *Python Toolkit* as a resource
+
+This is a short introduction to python concepts, including: 
 
  * Basic function definitions
  
