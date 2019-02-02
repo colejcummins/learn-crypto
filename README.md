@@ -8,7 +8,7 @@ All projects are done in python with example code and project specifications out
 
 ### 1. Python Introduction
 
-For python/programming beginners start with the *Python Introduction*, using the *Python Toolkit* as a resource
+Python/programming beginners start with the *Python Introduction*, using the *Python Toolkit* as a resource
 
 This is a short introduction to python concepts, including: 
 
